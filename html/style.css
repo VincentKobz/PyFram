@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+body {
+    background-color: #B3B7EE;
+}
+
+h1 {
+    font-size: 60px;
+    color: #FBF9FF;
+    text-align: center;
+    font-family: 'Reem Kufi', sans-serif;
+    transition: all 0.5s ease-in-out;
+}
+
+h1:hover {
+    transform: scale(1.05);
+}
+
+.Field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Field input {
+    width: 400px;
+    height: 40px;
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    color: #000807;
+    background-color: #FBF9FF;
+}
+
+.Field button {
+    color: #FBF9FF;
+    cursor: pointer;
+    margin: 20px;
+    width: 110px;
+    height: 35px;
+    font-size: 17px;
+    font-family: 'Rubik', sans-serif;
+    border: #FBF9FF solid 3px;
+    border-radius: 10px;
+    background-color: transparent;
+    transition: all 0.1s ease-in-out;
+}
+
+.Field button:hover {
+    transform: scale(1.03)
+}
+
+.Field button:active {
+    background-color: #9395D3;
+}
+
+.Output {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 420px;
+    height: 200px;
+    background-color: #FBF9FF;
+    border-radius: 10px;
+}
