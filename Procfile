@@ -1,0 +1,1 @@
+web: cd PyFrame && gunicorn PyFrame.wsgi
