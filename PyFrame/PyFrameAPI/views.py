@@ -1,3 +1,4 @@
+import json
 from django.http import HttpResponse
 from django.shortcuts import render
 from PyService.parse import parser
@@ -6,8 +7,11 @@ from PyService.parse import parser
 def hello(request):
     return HttpResponse("Hello World!")
 
-def calcul(request, calcul_request):
-    print(calcul_request)
-    result = parser(calcul_request)
+def calcul(request):
+    print("test")
+    body = request.body.decode('utf-8')
+    print(body)
+    body = json.loads(body)
+    result = parser(body['expression'])
     print(result)
     return HttpResponse(result)

@@ -5,7 +5,6 @@ from math import *
 
 
 def parser(calcul):
-    calcul = calcul[1:-1]
     print(calcul)
     expression = calcul.split(':')
 
