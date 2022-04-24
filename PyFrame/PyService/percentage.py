@@ -1,6 +1,5 @@
 import re
-
-from PyFrame.PyService.tools import is_float, is_integer
+from PyService.tools import is_float, is_integer
 
 def process_percentage(expression):
     exp = "".join(expression.split())
