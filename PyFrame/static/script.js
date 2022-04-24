@@ -14,5 +14,5 @@ function request() {
 }
 
 function help() {
-    window.open("https://www.google.com")
+    window.open("https://github.com/VincentKobz/PyFram")
 }

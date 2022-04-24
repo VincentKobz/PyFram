@@ -39,7 +39,7 @@ def parser(calcul):
             return None
 
         return asin(radians(int(exp)))
-    elif header == 'arcos' and len(expression) == 2:
+    elif header == 'arccos' and len(expression) == 2:
         if not exp.isnumeric():
             return None
 
