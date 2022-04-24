@@ -2,6 +2,9 @@
 
 PyFram is a small implementation of WallFramAlpha with Python, Heroku and Django.
 
+## Get started:
+Go to https://pyfram.herokuapp.com/ and type your expression.
+
 ## Mathematical calculations:
 
 basic, function, normalize, percentage, cos, sin, arccos, arcsin
