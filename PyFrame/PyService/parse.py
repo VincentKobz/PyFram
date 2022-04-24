@@ -1,4 +1,4 @@
-from PyFrame.PyService import percentage
+from PyService import percentage
 from PyService import normalize
 from PyService import basic
 from PyService import function
