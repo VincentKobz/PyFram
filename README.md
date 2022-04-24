@@ -4,7 +4,7 @@ PyFram is a small implementation of WallFramAlpha with Python, Heroku and Django
 
 ## Mathematical calculations:
 
-basic, function, normalize, cos, sin, arccos, arcsin
+basic, function, normalize, percentage, cos, sin, arccos, arcsin
 
 Examples:
 * `basic: 1+1`
@@ -14,3 +14,4 @@ Examples:
 * `sin: {degree}`
 * `arccos: {degree}`
 * `arsin: {degree}`
+* `percentage: 10% of 5 miles`
