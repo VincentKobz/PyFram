@@ -3,8 +3,8 @@ from math import *
 
 from PyService.tools import *
 
-def Basic(expression):
-    if not checkIfValid(expression):
+def process_basic(expression):
+    if not check_if_valid(expression):
         return None
 
     expression = re.split('([^0-9.])', expression)
@@ -12,9 +12,9 @@ def Basic(expression):
     while '' in expression:
         expression.remove('')
 
-    return evaluatePolish(convertPolish(expression))
+    return evaluate_polish(convert_polish(expression))
 
-def getPrecedence(operator):
+def get_precedence(operator):
     if operator == '^':
         return 3
     elif operator == '*' or operator == '/':
@@ -22,14 +22,14 @@ def getPrecedence(operator):
     elif operator == '+' or operator == '-':
         return 1
 
-def convertPolish(expression):
+def convert_polish(expression):
     operator, output, q = "-+/*^", [], []
 
     for elt in expression:
-        if isFloat(elt) or isInteger(elt):
+        if is_float(elt) or is_integer(elt):
             output.append(elt)
         elif elt in operator:
-            while len(q) != 0 and (q[-1] in operator or q[-1] == ')') and getPrecedence(q[-1]) >= getPrecedence(elt):
+            while len(q) != 0 and (q[-1] in operator or q[-1] == ')') and get_precedence(q[-1]) >= get_precedence(elt):
                 output.append(q.pop())
 
             q.append(elt)
@@ -50,29 +50,29 @@ def convertPolish(expression):
 
     return output
 
-def evaluatePolish(expression):
+def evaluate_polish(expression):
     if expression == None:
         return None
 
     stack, operator = [], "-+/*^"
 
     for elt in expression:
-        if isFloat(elt) or isInteger(elt):
+        if is_float(elt) or is_integer(elt):
             stack.append(elt)
         elif elt in operator:
             if len(stack) < 2:
                 return None
             a, b, res = stack.pop(), stack.pop(), 0
 
-            if isFloat(a):
-                a = convertToFloat(a)
+            if is_float(a):
+                a = convert_to_float(a)
             else:
-                a = convertToInteger(a)
+                a = convert_to_integer(a)
 
-            if isFloat(b):
-                b = convertToFloat(b)
+            if is_float(b):
+                b = convert_to_float(b)
             else:
-                b = convertToInteger(b)
+                b = convert_to_integer(b)
 
             if elt == '+':
                 res = a + b
@@ -90,7 +90,7 @@ def evaluatePolish(expression):
         return None
     return stack.pop()
 
-def checkIfValid(expression):
+def check_if_valid(expression):
     data = ".1234567890-+/*()^"
 
     for i in expression:

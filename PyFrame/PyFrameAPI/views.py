@@ -13,7 +13,7 @@ def calcul(request):
     result = parser(body['expression'])
     print("Result: " + str(result))
     if result == None:
-        return HttpResponse(JsonResponse({"result": "Invalid expression"}), content_type="application/json")
+        return HttpResponse(JsonResponse({"result": "Invalid expression !"}), content_type="application/json")
     return HttpResponse(JsonResponse({"result": str(result)}), content_type="application/json")
 
 def home(request):

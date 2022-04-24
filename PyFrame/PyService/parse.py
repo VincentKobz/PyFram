@@ -1,3 +1,4 @@
+from PyFrame.PyService import percentage
 from PyService import normalize
 from PyService import basic
 from PyService import function
@@ -14,16 +15,18 @@ def parser(calcul):
     header, exp = expression[0], expression[1]
     exp = "".join(exp.split())
     if header == 'basic' and len(expression) == 2:
-        return basic.Basic(exp)
+        return basic.process_basic(exp)
     elif header == 'normalize' and len(expression) == 2:
-        return normalize.Normalize(exp)
+        return normalize.process_normalize(exp)
     elif header == 'function' and len(expression) == 3:
-        return function.Function(exp, expression[2])
+        return function.process_function(exp, expression[2])
     elif header == 'sqrt' and len(expression) == 2:
         if not exp.isnumeric():
             return None
-
+    
         return sqrt(radians(int(exp)))
+    elif header == 'percentage' and len(expression) == 2:
+        return percentage.process_percentage(exp)
     elif header == 'cos' and len(expression) == 2:
         if not exp.isnumeric():
             return None
@@ -44,5 +47,4 @@ def parser(calcul):
             return None
 
         return acos(radians(int(exp)))
-
     return None

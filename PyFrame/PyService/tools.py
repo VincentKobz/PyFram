@@ -1,25 +1,29 @@
-def isFloat(string):
+def is_float(string):
     try:
         float(string)
         return True
     except ValueError:
         return False
 
-def isInteger(string):
+def is_integer(string):
     try:
         int(string)
         return True
     except ValueError:
         return False
 
-def convertToFloat(string):
+def convert_to_float(string):
     try:
-        return float(string)
+        value = float(string)
     except ValueError:
         return None
+    else:
+        return value
 
-def convertToInteger(string):
+def convert_to_integer(string):
     try:
-        return int(string)
+        value = int(string)
     except ValueError:
         return None
+    else:
+        return value

@@ -1,12 +1,12 @@
 from math import *
 from PyService.tools import *
 
-def Normalize(expression):
+def process_normalize(expression):
     expression, norm, result = expression.split(","), 0, []
 
     for elt in expression:
         print(elt)
-        if not isFloat(elt) and not isInteger(elt):
+        if not is_float(elt) and not is_integer(elt):
             print('test')
             return None
 
