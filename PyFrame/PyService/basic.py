@@ -79,6 +79,8 @@ def evaluate_polish(expression):
             elif elt == '-':
                 res = b - a
             elif elt == '/':
+                if a == 0:
+                    return None
                 res = b / a
             elif elt == '*':
                 res = a * b
