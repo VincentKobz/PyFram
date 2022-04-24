@@ -4,7 +4,7 @@ function request() {
         expression: name.value,
     };
         
-    var request = new Request('http://127.0.0.1:8000/frame/');
+    var request = new Request('https://pyfram.herokuapp.com/frame');
     fetch(request, { mode: 'cors', method: 'POST', body: JSON.stringify(data) })
         .then(response => response.json())
         .then(data => {

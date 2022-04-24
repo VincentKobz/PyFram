@@ -1,0 +1,6 @@
+Django
+django-cors-headers
+django
+gunicorn
+whitenoise
+django-heroku
