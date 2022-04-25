@@ -1,7 +1,6 @@
 # PyFram
 
-PyFram is a small implementation of WallFramAlpha with Python, Heroku and Django.
-<br/ >
+PyFram is a small implementation of WallFramAlpha with Python, Heroku and Django.\
 Inspired by: https://github.com/Flowtter/golfram.
 
 ## Get started:
