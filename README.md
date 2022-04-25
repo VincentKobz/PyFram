@@ -1,6 +1,7 @@
 # PyFram
 
 PyFram is a small implementation of WallFramAlpha with Python, Heroku and Django.
+Inspired by: https://github.com/Flowtter/golfram.
 
 ## Get started:
 Go to https://pyfram.herokuapp.com/ and type your expression.
