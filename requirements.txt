@@ -4,4 +4,4 @@ django
 gunicorn
 whitenoise
 django-heroku
-decouple
+python-decouple
